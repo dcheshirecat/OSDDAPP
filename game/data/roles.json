@@ -1,0 +1,14 @@
+{
+  "host":       {"name":"Host","icon":"house","color":"7a8cc9","desc":"Fronts most often. +10% on Home and Work tasks. Switching to the Host in events costs no stress.","tags":{"home":10,"work":10}},
+  "protector":  {"name":"Protector","icon":"shield","color":"5d6f9e","desc":"Steps up when things get hard. +3% per 10 stress on any task (up to +25%).","tags":{}},
+  "caretaker":  {"name":"Caretaker","icon":"heart-plus","color":"5fae9c","desc":"Looks after everyone. Halves stress gained on failure. +10% on Self-care tasks.","tags":{"selfcare":10}},
+  "little":     {"name":"Little","icon":"wrapped-sweet","color":"f0a35e","desc":"Young and playful. +20% on Play tasks; successful tasks with a Little reduce stress by 3.","tags":{"play":20}},
+  "gatekeeper": {"name":"Gatekeeper","icon":"key","color":"8b7cc8","desc":"Manages switches. In events, switching fronters costs no stress while a Gatekeeper is on the team.","tags":{}},
+  "manager":    {"name":"Manager","icon":"calendar","color":"6d9bc3","desc":"Keeps things running. +15% on Work tasks; team gets +5% Organization.","tags":{"work":15}},
+  "social":     {"name":"Social","icon":"conversation","color":"e07a9a","desc":"Great with people. +15% on Social tasks.","tags":{"social":15}},
+  "soother":    {"name":"Soother","icon":"meditation","color":"7cbf8e","desc":"Calms the system. After any task, stress -4.","tags":{}},
+  "creative":   {"name":"Creative","icon":"palette","color":"e6b54a","desc":"Artistic soul. +15% on Play and Self-care tasks; team gets +5% Creativity.","tags":{"play":15,"selfcare":5}},
+  "memory":     {"name":"Memory Holder","icon":"brain","color":"9a7fb5","desc":"Holds history. +15% on Medical and Memory tasks; events with lost time are easier.","tags":{"medical":15,"memory":15}},
+  "fictive":    {"name":"Fictive","icon":"sparkles","color":"c77fd6","desc":"Based on a character. Brings borrowed confidence: +6% on every task.","tags":{}},
+  "teen":       {"name":"Teen","icon":"skateboard","color":"62b6cb","desc":"Energetic and stubborn. +15% on Outside tasks.","tags":{"outside":15}}
+}

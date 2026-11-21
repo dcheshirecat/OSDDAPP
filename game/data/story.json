@@ -1,0 +1,165 @@
+{
+  "chapters": [
+    {"id":1,"title":"A New Routine","intro":"The diagnosis came three weeks ago. The word is still strange in your mouth: plural. A system. Sam always thought the gaps in their memory were just stress. Now there are names in the journal that aren't Sam's handwriting. Maybe that's... okay? Maybe we can work together.","events":["ev_morning","ev_grocery"]},
+    {"id":2,"title":"Clocking In","intro":"Bills don't care about headspace. There's a new job — or a new semester — and everyone needs to figure out who's good at what. Some of us love deadlines. Some of us really, really don't.","events":["ev_first_day","ev_team_meeting","ev_exam"]},
+    {"id":3,"title":"Out in the World","intro":"Errands. Appointments. Phone calls. The outside world runs on scripts nobody gave us. Time to write our own.","events":["ev_doctor","ev_bank_call","ev_lost_time"]},
+    {"id":4,"title":"People We Love","intro":"Friends have noticed that 'you' sometimes like different foods, laugh at different jokes, answer to a slightly different voice. Connection is scary. It's also the point.","events":["ev_birthday","ev_disclosure","ev_date"]},
+    {"id":5,"title":"Hard Days","intro":"Not every day is a good day. Some days the ground shifts. But the system has grown. There are more hands to hold now.","events":["ev_trigger","ev_therapy","ev_family_dinner"]},
+    {"id":6,"title":"Home Within","intro":"The headspace feels different lately. Warmer. Doors that used to be locked are open. It's time to build a life everyone can live in.","events":["ev_moving","ev_our_day"]}
+  ],
+  "events": {
+    "ev_morning": {"name":"The Morning Routine","tier":1,"spoons":2,"cw":null,
+      "intro":"The alarm goes off. Then the snooze. Then the second snooze. Who's up first?",
+      "nodes":[
+        {"text":"The alarm is blaring. Someone needs to actually get out of bed.","choices":[{"label":"Push through and get up","skill":"PHY","ok":"Feet on the cold floor. You're up!","fail":"Back under the blanket. Ten more minutes turn into thirty."},{"label":"Gentle self-talk","skill":"REG","ok":"'Just sit up. That's all.' It works.","fail":"The inner monologue argues with itself. Loudly."}]},
+        {"text":"Breakfast. The fridge holds: one egg, mystery leftovers, and oat milk.","choices":[{"label":"Improvise something tasty","skill":"CRE","ok":"Egg fried rice! From leftovers! Genius.","fail":"It's... edible. Mostly."},{"label":"Check the meal plan","skill":"ORG","ok":"Jo left a note: 'oatmeal, cabinet 2.' Perfect.","fail":"The meal plan is from two weeks ago."}]},
+        {"text":"Did we take our meds? Nobody remembers. The pill organizer is right there.","choices":[{"label":"Check carefully","skill":"FOC","ok":"Tuesday's slot is full. Meds taken, logged.","fail":"Wait, is today Tuesday or Wednesday?"}]},
+        {"text":"Out the door! ...Where are the keys?","choices":[{"label":"Retrace steps","skill":"FOC","ok":"In the fridge. Next to the oat milk. Of course.","fail":"Found them after 15 minutes. In your pocket."},{"label":"Ask inside","skill":"SOC","ok":"A small voice: 'I put them in the shoe!' Thanks, Pip.","fail":"Nobody's answering. The headspace is sleepy."}]}
+      ],
+      "outro":"You made it out the door. Late-ish, but in one piece. Someone leaves a note in the journal: 'Good job, team.'"},
+    "ev_grocery": {"name":"The Grocery Run","tier":1,"spoons":3,"cw":"Crowded, noisy spaces",
+      "intro":"The fridge is empty. Time to brave the supermarket on a Saturday.",
+      "nodes":[
+        {"text":"Making the list. Everyone has requests. Pip wants dino nuggets. Toby wants vegetables.","choices":[{"label":"Organize by aisle","skill":"ORG","ok":"A beautiful list, sorted by section. Dino nuggets included.","fail":"The list just says 'food??'"},{"label":"Hold a quick system vote","skill":"SOC","ok":"Compromise: nuggets AND broccoli.","fail":"Everyone talks at once. Headache incoming."}]},
+        {"text":"The store is packed. Bright lights, beeping, someone's kid is screaming.","choices":[{"label":"Ground and breathe","skill":"REG","ok":"Headphones on, deep breath. It's manageable.","fail":"Everything is too loud. You hide in the cereal aisle for a bit."},{"label":"Power through fast","skill":"PHY","ok":"In and out like a speedrun.","fail":"Your cart has a wobbly wheel. Of course it does."}]},
+        {"text":"The thing you came for is out of stock.","choices":[{"label":"Find a substitute","skill":"CRE","ok":"Different brand, same vibe. Crisis averted.","fail":"You stare at the empty shelf for a long time."}]},
+        {"text":"Self-checkout: 'Unexpected item in bagging area.'","choices":[{"label":"Stay calm and call for help","skill":"SOC","ok":"The attendant fixes it with a smile.","fail":"You apologize to the machine. Twice."},{"label":"Figure it out","skill":"FOC","ok":"Re-scan, re-bag, done.","fail":"The machine wins this round."}]}
+      ],
+      "outro":"Bags in hand. Nobody fronted alone today, and the trip felt lighter for it."},
+
+    "ev_first_day": {"name":"First Day at the New Job","tier":2,"spoons":3,"cw":null,
+      "intro":"New job. New people. New coffee machine. Let's make a good first impression — with whoever is fronting.",
+      "nodes":[
+        {"text":"Introductions around the office. So many names.","choices":[{"label":"Be friendly and chatty","skill":"SOC","ok":"Everyone seems to like you. Mira is thrilled.","fail":"You call someone 'Dave.' Their name is Karen."},{"label":"Write names down","skill":"ORG","ok":"A tidy little seating chart in your notebook.","fail":"Your notes say 'tall guy?' and 'plant lady.'"}]},
+        {"text":"Onboarding training: a 2-hour video about the filing system.","choices":[{"label":"Lock in","skill":"FOC","ok":"Taking notes, absorbing everything.","fail":"You lose time. Someone else watched it, but their notes are illegible."}]},
+        {"text":"Your manager hands you a task with vague instructions.","choices":[{"label":"Ask clarifying questions","skill":"SOC","ok":"Clear expectations. Great start.","fail":"You nod a lot. You have no idea what she meant."},{"label":"Make a plan","skill":"ORG","ok":"Broken into steps. Doable.","fail":"The plan has a plan. Paralysis."}]},
+        {"text":"End of day. You're exhausted and someone invites you to after-work drinks.","choices":[{"label":"Politely decline","skill":"REG","ok":"'Next time!' Boundaries feel good.","fail":"You say yes, then regret it all the way there."},{"label":"Go, briefly","skill":"SOC","ok":"Thirty minutes, one soda, new friends.","fail":"Small talk overload."}]}
+      ],
+      "outro":"First day: survived. Ivy would probably say 'adequate.' From Ivy, that's a compliment."},
+    "ev_team_meeting": {"name":"The Big Team Meeting","tier":2,"spoons":3,"cw":null,
+      "intro":"The quarterly meeting. Your project is on the agenda.",
+      "nodes":[
+        {"text":"Preparing your talking points the night before.","choices":[{"label":"Outline it all","skill":"ORG","ok":"Bullet points, color-coded.","fail":"You make slides about making slides."},{"label":"Make it engaging","skill":"CRE","ok":"A great story to frame the data.","fail":"Too many memes."}]},
+        {"text":"The meeting starts. You feel a switch coming on — someone wants to come forward.","choices":[{"label":"Smooth handoff","skill":"REG","ok":"A seamless co-front. Nobody notices a thing.","fail":"A few seconds of fog. 'Sorry, could you repeat that?'"},{"label":"Stay present","skill":"FOC","ok":"You hold steady through it.","fail":"You zone out during your own section."}]},
+        {"text":"Your turn to present.","choices":[{"label":"Speak with confidence","skill":"SOC","ok":"Clear, calm, convincing.","fail":"Your voice wobbles. But you finish."}]},
+        {"text":"A coworker challenges your numbers. Loudly.","choices":[{"label":"Stand firm","skill":"REG","ok":"'Let's look at the data together.' Captain would be proud.","fail":"Your face goes hot. You concede a point you were right about."},{"label":"Recall the details","skill":"FOC","ok":"Page 3, figure 2. You were right.","fail":"You know the answer. It's just... somewhere else in the system."}]}
+      ],
+      "outro":"Your manager emails afterward: 'Great work today.' Somebody inside does a little victory dance."},
+    "ev_exam": {"name":"Finals Week","tier":3,"spoons":4,"cw":"Academic stress",
+      "intro":"An exam in the morning. Not everybody took the same notes. Not everybody went to the same lectures.",
+      "nodes":[
+        {"text":"Pooling knowledge: who remembers what from class?","choices":[{"label":"Hold a headspace study group","skill":"SOC","ok":"Quill had chapter 3, Echo had chapter 5. Together it's complete!","fail":"Half the system was 'in' for different lectures. Gaps everywhere."},{"label":"Reorganize the notes","skill":"ORG","ok":"One master study guide, merged from everyone's handwriting.","fail":"Four different handwritings. One of them is crayon."}]},
+        {"text":"Late-night cramming. The brain is mush.","choices":[{"label":"Push through","skill":"FOC","ok":"It's clicking now.","fail":"You read the same paragraph nine times."},{"label":"Take a real break","skill":"REG","ok":"Snack, stretch, water. Back stronger.","fail":"The break lasted three hours. Oops."}]},
+        {"text":"Exam room. The first question looks unfamiliar.","choices":[{"label":"Breathe and skip ahead","skill":"REG","ok":"Question 2 is easy. Confidence builds.","fail":"Panic rising. You stare at the clock."},{"label":"Think creatively","skill":"CRE","ok":"You work it out from first principles.","fail":"Creative answer. Wrong, though."}]},
+        {"text":"Final essay question.","choices":[{"label":"Write it out","skill":"CRE","ok":"Quill takes the pen and the words just flow.","fail":"You run out of time mid-sentence."},{"label":"Structured answer","skill":"ORG","ok":"Intro, three points, conclusion. Textbook.","fail":"Your outline was great. The essay never happened."}]},
+        {"text":"Pencils down. Walking out of the exam hall.","choices":[{"label":"Celebrate!","skill":"SOC","ok":"Bubble tea with classmates.","fail":"You go home and stare at the ceiling. That's fine too."}]}
+      ],
+      "outro":"Whatever the grade, you did it as a team. That's worth more than an A."},
+
+    "ev_doctor": {"name":"The Doctor's Appointment","tier":2,"spoons":4,"cw":"Medical settings",
+      "intro":"An appointment you've rescheduled three times. Today's the day.",
+      "nodes":[
+        {"text":"Booking was the easy part. Getting there on time is another.","choices":[{"label":"Plan the route","skill":"ORG","ok":"Bus at 9:12, arrive 9:40. Done.","fail":"You arrive at the wrong building."}]},
+        {"text":"The waiting room. Fluorescent lights. Clipboard forms.","choices":[{"label":"Fill out the forms","skill":"FOC","ok":"Every box checked. Even the weird ones.","fail":"'Previous surgeries?' Nobody knows. Some memories aren't accessible."},{"label":"Self-soothe","skill":"REG","ok":"Fidget toy in pocket. Steady breathing.","fail":"Your leg won't stop bouncing."}]},
+        {"text":"The doctor asks about your symptoms. You only partially remember.","choices":[{"label":"Check the system notes","skill":"ORG","ok":"Echo kept a symptom log. Dates, details, everything.","fail":"The notes are in three different apps."},{"label":"Advocate for yourself","skill":"SOC","ok":"'I need you to take this seriously.' They do.","fail":"You say 'it's probably nothing' and immediately regret it."}]},
+        {"text":"The doctor gives you a lot of instructions very quickly.","choices":[{"label":"Ask them to write it down","skill":"SOC","ok":"A printed sheet. Excellent.","fail":"You forget everything by the parking lot."},{"label":"Focus hard","skill":"FOC","ok":"You catch every detail.","fail":"Two out of five instructions retained."}]}
+      ],
+      "outro":"Appointment done. You treat yourselves to something nice on the way home. Everyone agrees: worth it."},
+    "ev_bank_call": {"name":"Calling the Bank","tier":3,"spoons":3,"cw":null,
+      "intro":"There's a charge on your account you didn't make. Or... did someone else in here make it?",
+      "nodes":[
+        {"text":"First: an internal investigation. Did anyone buy a $40 art set?","choices":[{"label":"Ask around inside","skill":"SOC","ok":"Wren confesses: 'it was for the system!' Fair. But the other charge is real fraud.","fail":"Nobody answers. Suspicious silence."},{"label":"Check the receipts","skill":"FOC","ok":"Art set: Wren. Mystery $200: definitely not us.","fail":"Receipts are a mess."}]},
+        {"text":"You dial. The hold music is a single song on loop.","choices":[{"label":"Wait patiently","skill":"REG","ok":"Forty minutes. You make it with grace.","fail":"You hang up at minute 38. Have to call again."},{"label":"Do something meanwhile","skill":"CRE","ok":"You doodle an entire comic while waiting.","fail":"You get distracted and miss when they pick up."}]},
+        {"text":"The agent asks for security questions. 'What was your first pet's name?'","choices":[{"label":"Ask the memory holders","skill":"FOC","ok":"Ellis knows. 'Biscuit.' Correct!","fail":"Three different alters give three different answers."}]},
+        {"text":"The agent says they can't help and wants to end the call.","choices":[{"label":"Stand your ground","skill":"SOC","ok":"Marisol takes over. 'Escalate this, please.' Charge reversed.","fail":"You thank them for not helping and hang up."},{"label":"Stay calm and persistent","skill":"REG","ok":"Polite, firm, repeated. They give in.","fail":"Your voice cracks. You'll try again tomorrow."}]}
+      ],
+      "outro":"Fraud reported, card replaced. Wren gets to keep the art set. Everyone agrees that's fair."},
+    "ev_lost_time": {"name":"Where Did Tuesday Go?","tier":3,"spoons":3,"cw":"Dissociation / lost time",
+      "intro":"You 'wake up' and it's Thursday. The last thing you remember is Tuesday afternoon.",
+      "nodes":[
+        {"text":"First, orientation. Where are you? What day is it?","choices":[{"label":"Ground yourself","skill":"REG","ok":"Feet on floor, check the phone. Thursday, 3pm. Safe at home.","fail":"Everything feels far away for a while."},{"label":"Look for clues","skill":"FOC","ok":"Dishes done, plants watered. Someone took care of things.","fail":"Clues are confusing. Why is there a kite?"}]},
+        {"text":"Check messages. Did anyone reply to anyone?","choices":[{"label":"Read carefully","skill":"FOC","ok":"Someone answered work emails. Professionally, even!","fail":"Someone texted your friend 'lol ok' in all caps."},{"label":"Smooth things over","skill":"SOC","ok":"A quick 'sorry, been a weird week!' and everything's fine.","fail":"Your apology is more confusing than the original text."}]},
+        {"text":"Leave a note in the journal for whoever was out.","choices":[{"label":"Write a kind note","skill":"CRE","ok":"'Thank you for handling things. Can we talk?' A reply appears the next day.","fail":"The note comes out a bit accusatory. Oops."},{"label":"Set up a shared calendar","skill":"ORG","ok":"Now everyone can log what they did. Fewer surprises.","fail":"The calendar app wants a subscription."}]}
+      ],
+      "outro":"Lost time is still scary. But this time, someone left the lights on for you."},
+
+    "ev_birthday": {"name":"A Friend's Birthday Party","tier":3,"spoons":4,"cw":"Crowded, noisy spaces",
+      "intro":"Your friend Alex is turning 30. There will be people. Many people.",
+      "nodes":[
+        {"text":"What gift do you get?","choices":[{"label":"Make something handmade","skill":"CRE","ok":"A painted mug. Alex will love it.","fail":"The glue isn't dry. You're holding it in a bag very carefully."},{"label":"Remember what they wanted","skill":"FOC","ok":"That book they mentioned in June! Perfect.","fail":"You get a gift card. It's fine."}]},
+        {"text":"Arriving at the party. Music, voices, too many faces.","choices":[{"label":"Find your friend","skill":"SOC","ok":"Alex hugs you immediately. You relax.","fail":"You stand by the snacks for 20 minutes."},{"label":"Take a moment outside first","skill":"REG","ok":"A breath of fresh air. Ready now.","fail":"You almost go home. Almost."}]},
+        {"text":"A party game starts! Charades.","choices":[{"label":"Go all in","skill":"CRE","ok":"Your interpretive dance of 'Jaws' gets a standing ovation.","fail":"Nobody guesses 'toaster.'"},{"label":"Cheer from the side","skill":"SOC","ok":"Best hype person in the room.","fail":"You feel left out."}]},
+        {"text":"Someone you don't know asks, 'Didn't we meet last week?' You have no memory of it.","choices":[{"label":"Play it cool","skill":"SOC","ok":"'Oh yeah! Remind me your name?' Smooth.","fail":"You panic and say 'I have a twin.'"},{"label":"Ask inside","skill":"FOC","ok":"Nova: 'That's Jordan! We talked about frogs.'","fail":"Silence from the headspace."}]},
+        {"text":"It's getting late and your social battery is at 2%.","choices":[{"label":"Leave gracefully","skill":"REG","ok":"Goodbyes, hugs, home. Perfect timing.","fail":"Irish exit. You'll text an apology."}]}
+      ],
+      "outro":"Alex texts later: 'So glad you came!! ❤'. The whole system feels warm."},
+    "ev_disclosure": {"name":"Telling a Friend","tier":3,"spoons":4,"cw":"Disclosure of DID/OSDD; possible invalidation",
+      "intro":"Alex deserves to know. The system has voted — mostly yes. Today you're going to tell them.",
+      "nodes":[
+        {"text":"How do you even start this conversation?","choices":[{"label":"Write a script","skill":"ORG","ok":"Quill drafts it. Clear, honest, hopeful.","fail":"Fourteen drafts. None feel right."},{"label":"Speak from the heart","skill":"CRE","ok":"You decide to just be honest. That's enough.","fail":"Your mind goes blank."}]},
+        {"text":"Sitting across from Alex. Heart pounding.","choices":[{"label":"Stay grounded","skill":"REG","ok":"Steady hands. Steady voice. You say it.","fail":"You almost switch out mid-sentence. You push through, shakily."}]},
+        {"text":"Alex is quiet. Then: 'So... is that why you sometimes like olives and sometimes don't?'","choices":[{"label":"Laugh and explain","skill":"SOC","ok":"'Yes! Benny hates olives.' Alex laughs too.","fail":"Your laugh comes out weird. Awkward pause."},{"label":"Share resources","skill":"ORG","ok":"You show them a page from a plurality resource. They read it carefully.","fail":"You info-dump for 30 minutes."}]},
+        {"text":"Alex asks: 'Can I meet... the others?'","choices":[{"label":"Let someone say hi","skill":"SOC","ok":"Pip waves shyly. Alex waves back. Pip is delighted.","fail":"Nobody wants to come out. That's okay — next time."},{"label":"Set a gentle boundary","skill":"REG","ok":"'Maybe someday. Not today.' Alex says, 'Of course.'","fail":"You feel pressured. You end the conversation early."}]}
+      ],
+      "outro":"Alex hugs you. 'Thank you for trusting me. All of you.' The headspace is brighter tonight."},
+    "ev_date": {"name":"A First Date","tier":4,"spoons":4,"cw":null,
+      "intro":"You matched with someone cute. There's a coffee date on Saturday. Several alters have opinions about this.",
+      "nodes":[
+        {"text":"What do you wear? The closet has... range.","choices":[{"label":"Put an outfit together","skill":"CRE","ok":"Cozy but cute. Everyone approves.","fail":"Four outfits on the bed. Running late."}]},
+        {"text":"The conversation starts. They seem nice!","choices":[{"label":"Be charming","skill":"SOC","ok":"They laugh at your jokes. Real laughs.","fail":"You overshare about your houseplants."},{"label":"Listen attentively","skill":"FOC","ok":"You ask great follow-up questions.","fail":"You keep losing the thread."}]},
+        {"text":"They ask, 'So what are you like?' That's... a complicated question.","choices":[{"label":"Answer honestly-ish","skill":"REG","ok":"'I contain multitudes.' They smile. Maybe someday you'll explain.","fail":"You freeze. 'Um. Normal?'"},{"label":"Turn it into a fun story","skill":"CRE","ok":"A charming answer about your many hobbies. All true!","fail":"Very confusing story."}]},
+        {"text":"Wrapping up. Do you want a second date?","choices":[{"label":"Check in with the system","skill":"SOC","ok":"Unanimous-ish 'yes!' You ask, they say yes too.","fail":"Internal debate drags on. You say 'I'll text you.'"}]}
+      ],
+      "outro":"Whatever happens next, the system learned something: you're allowed to want good things."},
+
+    "ev_trigger": {"name":"An Unexpected Trigger","tier":4,"spoons":4,"cw":"Panic, triggers, distress (non-graphic)",
+      "intro":"A smell. A song. Something small, and suddenly the world tilts. The front feels shaky.",
+      "nodes":[
+        {"text":"The panic is rising. You need to get somewhere safer.","choices":[{"label":"Move to a quiet place","skill":"PHY","ok":"A bench outside, away from the noise.","fail":"Your legs feel like jelly. You sit on the floor right there."},{"label":"Ground in place","skill":"REG","ok":"Cold water bottle in your hand. Five things you can see.","fail":"It's hard to breathe. Keep trying."}]},
+        {"text":"Someone inside needs to come forward — someone who can handle this.","choices":[{"label":"Let a protector front","skill":"REG","ok":"A calm presence steps up. 'I've got us.'","fail":"The front is fuzzy. Several people hovering, nobody fully in."},{"label":"Reach out to someone safe","skill":"SOC","ok":"You text Alex: 'Rough moment.' They call immediately.","fail":"You type and delete the message five times."}]},
+        {"text":"The worst has passed. Now: what do the littles need?","choices":[{"label":"Comfort the little ones","skill":"CRE","ok":"Soft blanket, cartoons, a favorite plushie. Safe.","fail":"Pip is crying in the headspace. It'll take time."},{"label":"Reassure the whole system","skill":"SOC","ok":"'We're safe. It's over. It's today, not then.'","fail":"Some alters aren't ready to listen yet."}]},
+        {"text":"Later: make a note for the therapist and for the system.","choices":[{"label":"Log it carefully","skill":"ORG","ok":"Trigger noted, coping skills that worked noted.","fail":"You don't want to think about it yet. That's okay."},{"label":"Write it out","skill":"CRE","ok":"Quill writes a poem about it. Something heavy becomes something held.","fail":"The words won't come today."}]}
+      ],
+      "outro":"Hard days end, too. You got through this one together. Rest now."},
+    "ev_therapy": {"name":"Therapy Session","tier":4,"spoons":4,"cw":"Therapy discussions, emotional topics",
+      "intro":"Weekly therapy. Today, the therapist wants to try talking with more of the system.",
+      "nodes":[
+        {"text":"Getting there with enough spoons left to actually talk.","choices":[{"label":"Plan the day lightly","skill":"ORG","ok":"Nothing else scheduled. Smart.","fail":"You booked a dentist appointment right before. Why."}]},
+        {"text":"The therapist asks who's present today.","choices":[{"label":"Check in internally","skill":"FOC","ok":"'Sam is fronting, Ellis and Sage are close.' Clear and honest.","fail":"Blurry. 'Uh... us? Someone?'"},{"label":"Let the right person front","skill":"REG","ok":"Ellis steps forward. He's ready to talk about the hard stuff.","fail":"A switch doesn't quite happen."}]},
+        {"text":"A hard topic comes up.","choices":[{"label":"Stay with the feeling","skill":"REG","ok":"It hurts, but it moves through. Progress.","fail":"You change the subject to the therapist's nice plant."},{"label":"Use art to express it","skill":"CRE","ok":"You draw what you can't say. The therapist nods.","fail":"You scribble and then scribble over it."}]},
+        {"text":"Homework time: improve inner communication this week.","choices":[{"label":"Set up a system meeting","skill":"SOC","ok":"A weekly 'headspace meeting' is planned. Everyone's invited.","fail":"You agree, but nobody remembers to do it."},{"label":"Make a communication board","skill":"ORG","ok":"A whiteboard on the fridge. Messages for each other.","fail":"The whiteboard markers are dry."}]}
+      ],
+      "outro":"Therapy is hard work. Everyone gets a nap afterward. Earned."},
+    "ev_family_dinner": {"name":"Family Dinner","tier":5,"spoons":5,"cw":"Family tension, invalidation",
+      "intro":"A holiday dinner with family. They don't know. Or they half-know and don't believe it.",
+      "nodes":[
+        {"text":"Preparing for the visit. Boundaries need to be planned in advance.","choices":[{"label":"Decide your limits","skill":"ORG","ok":"Two hours max. An exit phrase ready. A friend on standby.","fail":"'I'll just play it by ear.' Famous last words."},{"label":"Rehearse with the system","skill":"SOC","ok":"Captain volunteers for the hard conversations.","fail":"Everyone's nervous. Nobody wants to go."}]},
+        {"text":"A relative makes a comment about how you 'used to be more fun.'","choices":[{"label":"Let it roll off","skill":"REG","ok":"You smile and change the subject. It doesn't stick.","fail":"It stings more than you expected."},{"label":"Respond with humor","skill":"CRE","ok":"'I'm a lot of fun. Ask any of me.' Your cousin snorts with laughter.","fail":"Nobody gets the joke."}]},
+        {"text":"The table gets loud. Old arguments resurface.","choices":[{"label":"Hold steady","skill":"REG","ok":"You don't take the bait. Calm in the storm.","fail":"You feel yourself slipping back. Getting younger."},{"label":"Step away","skill":"PHY","ok":"'Just getting some air.' A walk around the block.","fail":"You get cornered in the kitchen."}]},
+        {"text":"Someone asks directly: 'Is this about that multiple personality thing?'","choices":[{"label":"Calmly correct","skill":"SOC","ok":"'It's called DID. And I'm happy to talk about it another time.'","fail":"You stumble over the words."},{"label":"Set a boundary","skill":"REG","ok":"'That's not up for discussion today.' Firm and kind.","fail":"You get pulled into a debate."}]},
+        {"text":"Time to go home.","choices":[{"label":"Leave on your terms","skill":"ORG","ok":"Right on schedule. Hugs where wanted.","fail":"You stay two hours longer than planned."},{"label":"Decompress on the drive","skill":"REG","ok":"Loud music, windows down, deep breaths.","fail":"Silent drive. A lot to process."}]}
+      ],
+      "outro":"You made it through. Family is complicated. Your system is your family too, and they were with you all night."},
+
+    "ev_moving": {"name":"Moving Day","tier":5,"spoons":5,"cw":null,
+      "intro":"A new apartment! With a bedroom that has room for a blanket fort AND a desk. But first: moving.",
+      "nodes":[
+        {"text":"Packing up. Whose box is whose?","choices":[{"label":"Label everything","skill":"ORG","ok":"Color-coded boxes for every room. Bolt is so happy.","fail":"Every box says 'STUFF.'"},{"label":"Pack fast","skill":"PHY","ok":"Done by noon!","fail":"A box breaks. Mugs everywhere."}]},
+        {"text":"The movers are late. And rude.","choices":[{"label":"Handle it firmly","skill":"SOC","ok":"Captain takes the phone. They're there in 20 minutes.","fail":"You end up carrying the couch yourself."},{"label":"Stay patient","skill":"REG","ok":"Deep breaths. Snack break while you wait.","fail":"Frustration bubbles over."}]},
+        {"text":"Heavy lifting time.","choices":[{"label":"Lift with your legs","skill":"PHY","ok":"Atlas fronts. Everything moved in record time.","fail":"Your back will remember this."}]},
+        {"text":"Unpacking: making the new space feel like home for everyone.","choices":[{"label":"Decorate thoughtfully","skill":"CRE","ok":"A shelf for Pip's toys, Wren's art on the walls, Juniper's plants by the window.","fail":"Everything's in a pile. It's a start."},{"label":"Make a cozy corner","skill":"REG","ok":"A soft corner for hard days. Everyone loves it.","fail":"Too tired to finish today."}]},
+        {"text":"The first night in the new place.","choices":[{"label":"Celebrate together","skill":"SOC","ok":"Pizza on the floor. Every alter gets a slice — metaphorically.","fail":"You fall asleep on a mattress with no sheets. Honestly? Great."}]}
+      ],
+      "outro":"New home. New start. The headspace has a new room too — you're not sure who built it, but it's lovely."},
+    "ev_our_day": {"name":"Our Day","tier":5,"spoons":5,"cw":null,
+      "intro":"A whole day, planned together, where everyone gets a turn. Breakfast with Toby, art with Wren, a walk with Bramble, games with Theo. Is it possible?",
+      "nodes":[
+        {"text":"Morning: planning the schedule so everyone gets time.","choices":[{"label":"Build the perfect schedule","skill":"ORG","ok":"Every hour accounted for, with breaks!","fail":"Too many people want 2pm."},{"label":"Hold a headspace meeting","skill":"SOC","ok":"Everyone gets a say. Even the quiet ones.","fail":"The meeting takes all morning."}]},
+        {"text":"Midday: a smooth series of switches.","choices":[{"label":"Graceful handoffs","skill":"REG","ok":"Switch, switch, switch — like a relay race.","fail":"Someone gets stuck in front longer than planned."},{"label":"Stay aware and co-con","skill":"FOC","ok":"Everyone stays co-conscious. Nobody loses time.","fail":"A few gaps, but nothing big."}]},
+        {"text":"Afternoon: a creative project the whole system works on.","choices":[{"label":"Make a system mural","skill":"CRE","ok":"Everyone paints a piece. It's chaotic and beautiful.","fail":"Paint everywhere. Worth it."}]},
+        {"text":"Evening: a walk at sunset.","choices":[{"label":"Walk and talk","skill":"PHY","ok":"Bramble narrates the trees. Kit chases a leaf.","fail":"It rains. You dance in it anyway."},{"label":"Quiet reflection","skill":"REG","ok":"Sage leads a gratitude moment. Everyone shares one thing.","fail":"Peaceful, even if your mind wanders."}]},
+        {"text":"Night: writing the day down in the system journal.","choices":[{"label":"Everyone writes a line","skill":"CRE","ok":"Thirty-four handwritings on one page. A family portrait in ink.","fail":"Only a few write. The rest draw hearts."}]}
+      ],
+      "outro":"You are many. You are one. You are a team. Thank you for playing — and the story keeps going, one day at a time."}
+  }
+}

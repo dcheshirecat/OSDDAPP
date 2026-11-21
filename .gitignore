@@ -1,0 +1,5 @@
+game/.godot/
+*.import.tmp
+/builds/*.idsig
+debug.keystore
+*.keystore
