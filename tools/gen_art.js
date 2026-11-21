@@ -78,7 +78,7 @@ const iconNames = new Set([
   // currencies / resources
   'sparkles','two-coins','crystal-cluster','spoon','lightning-trio','hearts','spiral-bloom',
   // nav
-  'house','three-friends','chest','alarm-clock','scroll-unfurled','sofa','cog','person','open-book','star-formation',
+  'house','three-friends','chest','alarm-clock','scroll-unfurled','sofa','cog','person','open-book','star-formation','sun','padlock','check-mark',
   // areas
   'vacuum-cleaner','briefcase','shopping-cart','party-popper','heart-plus',
 ]);

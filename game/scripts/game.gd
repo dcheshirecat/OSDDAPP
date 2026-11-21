@@ -16,7 +16,7 @@ const REST_AMOUNT := 15
 const MAX_LEVEL := 50
 const PRIMARY_BASE := [0, 30, 45, 65, 90, 120]
 const SKILL_FACTORS := [1.0, 0.7, 0.45]
-const CHORE_DIFFICULTY := [0, 25, 55, 120, 230, 400]
+const CHORE_DIFFICULTY := [0, 25, 48, 110, 220, 380]
 const EVENT_DIFFICULTY := [0, 30, 60, 125, 230, 400]
 const SUPPORT_WEIGHT := 0.35
 const EVENT_SUPPORT_WEIGHT := 0.25
@@ -517,7 +517,7 @@ func chore_power(cid: String, team: Array, fronter: String) -> float:
 		v *= team_skill_mult(team, s)
 		total += v * w
 		wsum += w
-	var base := total / max(wsum, 0.001)
+	var base: float = total / max(wsum, 0.001)
 	var b := team_bonus(team, fronter, c.tags, c.traits)
 	return base * (1.0 + b.pct / 100.0)
 
@@ -890,7 +890,7 @@ func complete_event() -> Dictionary:
 	var ev: Dictionary = DB.events[ev_id]
 	var tier := int(ev.tier)
 	var stars: int = max(1, 3 - int(run.fails))
-	var first := not state.story.done.has(ev_id)
+	var first: bool = not state.story.done.has(ev_id)
 	var mult := 1.0 if first else 0.3
 	var res := {"id": ev_id, "stars": stars, "first": first,
 		"sparks": int(100 * tier * mult), "coins": int(80 * tier * mult), "xp": int(40 * tier * mult),
