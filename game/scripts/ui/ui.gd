@@ -261,7 +261,7 @@ static func portrait(aid: String, size := 120, owned := true) -> Control:
 
 static func body(aid: String, h := 400) -> TextureRect:
 	var t := TextureRect.new()
-	t.texture = DB.body_tex(aid)
+	t.texture = DB.body_tex(Game.alter_portrait(aid) if Game.owns(aid) else aid)
 	t.custom_minimum_size = Vector2(h * 2.0 / 3.0, h)
 	t.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	t.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED

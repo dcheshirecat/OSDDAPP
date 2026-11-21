@@ -15,8 +15,8 @@
 | Skills | 6 core skills: Social, Organization, Physical, Regulation, Focus, Creativity |
 | Roles | Yes, as gameplay traits |
 | Progression | Levels, duplicate pulls raise stars, relationship bonds, comfort items |
-| Custom alters | Cosmetic only (name, pronouns, headshot) |
-| Art | Free commercial-use art, a different style per alter; headshot and full body |
+| Custom alters | Cosmetic only (name, pronouns, alternate full-body look) |
+| Art | Free commercial-use full-body art (Open Peeps / Humaaans); headshots cropped from the same body so they match |
 | Scope | Full-featured |
 | Monetization | Free; everything earned in game |
 | Connectivity | Offline, with backup (currently a copy/paste backup code) |

@@ -148,6 +148,8 @@ func _migrate(data: Dictionary) -> Dictionary:
 	for id in data.roster:
 		var r: Dictionary = data.roster[id]
 		r.level = int(r.level); r.stars = int(r.stars); r.xp = int(r.xp)
+		if str(r.get("portrait", "")).begins_with("alt_"):
+			r.portrait = ""   # old headshot-only looks were removed
 	return data
 
 func export_code() -> String:
@@ -284,6 +286,7 @@ func alter_pronouns(aid: String) -> String:
 		return r.pronouns
 	return DB.alters[aid].pronouns
 
+## The look (full body + matching headshot) shown for an alter: its own art or a chosen look id.
 func alter_portrait(aid: String) -> String:
 	var r = state.roster.get(aid)
 	if r and r.portrait != "":

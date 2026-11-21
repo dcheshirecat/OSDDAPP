@@ -152,7 +152,7 @@ func _about(b: VBoxContainer) -> void:
 
 func _credits(b: VBoxContainer) -> void:
 	b.add_child(header("Credits", true))
-	_para(b, "Every alter has a different art style, because every alter is their own person. All art is used under licenses that allow free commercial use:", 21, UI.MUTED)
+	_para(b, "Every alter is drawn as a full-body character, and their headshot is cropped from that same art. All art is used under licenses that allow free commercial use:", 21, UI.MUTED)
 	var seen := {}
 	for c in DB.credits_art:
 		var key: String = c.style + c.creator
@@ -167,4 +167,4 @@ func _credits(b: VBoxContainer) -> void:
 			v.add_child(UI.lbl(c.source, 17, UI.PRIMARY_DARK, false, true))
 		card.add_child(v)
 		b.add_child(card)
-	_para(b, "Avatars generated with DiceBear (dicebear.com). Full-body art via the react-peeps and react-humaaans packages. Built with Godot Engine (MIT).", 19, UI.MUTED)
+	_para(b, "Full-body art rendered from the react-peeps and react-humaaans packages. Built with Godot Engine (MIT).", 19, UI.MUTED)

@@ -21,7 +21,7 @@ var comfort_order: Array = []
 var decor: Dictionary = {}
 var decor_order: Array = []
 var roles: Dictionary = {}
-var alt_portraits: Array = []
+var looks: Array = []            # alternate full-body looks for customization
 var credits_art: Array = []
 
 var _tex_cache: Dictionary = {}
@@ -56,7 +56,7 @@ func load_all() -> void:
 		decor[d.id] = d
 		decor_order.append(d.id)
 	roles = _json("res://data/roles.json")
-	alt_portraits = _json("res://data/alt_portraits.json")
+	looks = _json("res://data/looks.json")
 	credits_art = _json("res://data/credits_art.json")
 
 func tex(path: String) -> Texture2D:
@@ -72,7 +72,8 @@ func icon(name: String) -> Texture2D:
 func portrait_tex(portrait_id: String) -> Texture2D:
 	return tex("res://assets/portraits/%s.png" % portrait_id)
 
-## Full-body art (400x600, transparent, feet at bottom edge).
+## Full-body art (400x600, transparent, feet at bottom edge). Accepts an alter id or a look id.
+## Headshots (portrait_tex) are cropped from these same bodies, so they always match.
 func body_tex(aid: String) -> Texture2D:
 	return tex("res://assets/bodies/%s.png" % aid)
 

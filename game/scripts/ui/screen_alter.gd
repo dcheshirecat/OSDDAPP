@@ -246,7 +246,7 @@ func _customize() -> void:
 	var r: Dictionary = Game.state.roster[aid]
 	var v := UI.vbox(14)
 	v.add_child(UI.title("Customize", 30))
-	v.add_child(UI.lbl("Make them look like someone in your own system, if you like. Stats stay the same.", 20, UI.MUTED, false, true))
+	v.add_child(UI.lbl("Make them look like someone in your own system, if you like. The look changes both their full body and headshot. Stats stay the same.", 20, UI.MUTED, false, true))
 	v.add_child(UI.lbl("Name", 20, UI.MUTED, true))
 	var name_edit := LineEdit.new()
 	name_edit.text = Game.alter_name(aid)
@@ -259,14 +259,14 @@ func _customize() -> void:
 	pr.max_length = 20
 	pr.custom_minimum_size.y = 64
 	v.add_child(pr)
-	v.add_child(UI.lbl("Headshot", 20, UI.MUTED, true))
+	v.add_child(UI.lbl("Look", 20, UI.MUTED, true))
 	var chosen := [r.portrait]
 	var grid := GridContainer.new()
 	grid.columns = 5
 	grid.add_theme_constant_override("h_separation", 8)
 	grid.add_theme_constant_override("v_separation", 8)
 	var options := [""]
-	for a in DB.alt_portraits:
+	for a in DB.looks:
 		options.append(a.id)
 	var tiles := []
 	for pid in options:

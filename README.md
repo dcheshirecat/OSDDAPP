@@ -19,7 +19,7 @@ There are no ads, accounts, network access or real-money purchases. Progress is 
 
 | System | Description |
 |---|---|
-| **Alters** | 34 alters, 5 rarity tiers, 12 roles (Host, Protector, Caretaker, Little, Gatekeeper, Manager, Social, Soother, Creative, Memory Holder, Fictive, Teen) and personality traits. Each alter has a headshot and full-body art in a different style. |
+| **Alters** | 34 alters, 5 rarity tiers, 12 roles (Host, Protector, Caretaker, Little, Gatekeeper, Manager, Social, Soother, Creative, Memory Holder, Fictive, Teen) and personality traits. Every alter is drawn as a full-body character (Open Peeps or Humaaans style), and their headshot is cropped from that same art. |
 | **Skills** | Social, Organization, Physical, Regulation, Focus, Creativity. Each is a base value plus a random roll range, in the style of Star Trek Timelines. |
 | **Tasks** | Real-time chores from a daily board, similar to shuttle missions. Pick up to 4 alters and choose who fronts. The fronter's skills count fully and teammates add 35%. Traits, roles, bonds, communication and stress all change the success chance. |
 | **Story** | 6 chapters and 16 multi-step events, similar to away missions. At each step you choose an approach and who fronts. Switching fronters costs stress unless a Gatekeeper is on the team. Each event gives up to 3 stars. Content notes appear before heavier topics. |
@@ -27,7 +27,7 @@ There are no ads, accounts, network access or real-money purchases. Progress is 
 | **Growth** | Levels 1–50 and star ranks. Bonds grow between alters who work together. Each alter has 2 slots for comfort items, out of 24 items. |
 | **Resources** | Spoons are energy (regenerate over time). Stress makes tasks harder above 50 and powers up Protectors. System communication gives a team-wide bonus. |
 | **Headspace** | A decoratable room where your alters wander. Rest there to lower stress, hold a daily system meeting, and buy 18 decor pieces that give passive bonuses. |
-| **Care** | Content-note toggle, a support resources page, reduced-motion setting and cosmetic customization (name, pronouns, headshot). |
+| **Care** | Content-note toggle, a support resources page, reduced-motion setting and cosmetic customization (name, pronouns, and 30 alternate full-body looks). |
 
 ## Project layout
 
@@ -37,7 +37,7 @@ game/                 Godot 4.4 project (GDScript)
   scripts/game.gd     Rules & save state (autoload "Game")
   scripts/db.gd       Data loading (autoload "DB")
   scripts/ui/         Code-built UI screens
-  assets/             Portraits, full-body art, icons, fonts
+  assets/             Full-body art + cropped headshots, icons, fonts
   tests/              Headless logic tests + screenshot harness
 tools/                Art generation scripts
 builds/               Signed APK
